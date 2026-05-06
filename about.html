@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | PenguPlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body" data-page="about">
+    <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <nav class="sidebar glass-liquid" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="sidebar-brand"><i class="fa-solid fa-igloo"></i> Menu</h2>
+        <a href="home.html"><i class="fa-solid fa-gamepad"></i> Play Game</a>
+        <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+        <a href="about.html" class="active"><i class="fa-solid fa-circle-info"></i> About Us</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="#" class="logout" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+    <canvas id="bgCanvas"></canvas>
+
+    <div class="glass-liquid dashboard-panel about-panel">
+        <div class="about-grid">
+            <div class="about-text gs-anim">
+                <h2><i class="fa-solid fa-circle-info"></i> The PenguPlay Project</h2>
+                <p>Welcome to <strong>PenguPlay</strong>, an immersive glassmorphism-styled 3D web experience. Built from scratch without external 3D assets, it features procedural rendering of adorable penguins waddling across different dynamic terrains.</p>
+                <p>Track your high scores, unlock achievements, and customize your profile in this fully interactive game hosted seamlessly on GitHub Pages.</p>
+            </div>
+            
+            <div class="creator-card glass-liquid gs-anim">
+                <div class="creator-header">
+                    <img src="https://i.pinimg.com/1200x/62/e2/73/62e273b65327dcaa614fb4bcebea6be1.jpg" alt="Henoch Raphael" class="creator-img-large">
+                </div>
+                <div class="creator-body">
+                    <h3>Henoch</h3>
+                    <p class="tag-title">INF-1</p> <!-- Sesuai Permintaan -->
+                    <ul class="social-links">
+                        <li><i class="fa-solid fa-envelope"></i> henoch.raphael@gmail.com</li>
+                        <li><a href="https://instagram.com/bwepanoch" target="_blank"><i class="fa-brands fa-instagram"></i> @bwepanoch</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

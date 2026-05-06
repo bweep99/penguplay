@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | PenguPlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body" data-page="login">
+    <canvas id="bgCanvas"></canvas>
+    <div class="glass-card">
+        <div class="card-header">
+            <h1><i class="fa-solid fa-igloo"></i> PenguPlay</h1>
+            <p>Welcome back to the icy world!</p>
+        </div>
+        <form id="loginForm">
+            <div class="input-group">
+                <i class="fa-solid fa-envelope input-icon"></i>
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">Email Address</label>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input type="password" id="password" required placeholder=" ">
+                <label for="password">Password</label>
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('password', this)"></i>
+            </div>
+            <button type="submit" class="btn-primary">Login to Play <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <div class="card-footer">
+            <p>New to the flock? <a href="register.html">Create an account</a></p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

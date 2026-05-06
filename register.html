@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | PenguPlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body" data-page="login">
+    <canvas id="bgCanvas"></canvas>
+    <div class="glass-card register-card">
+        <div class="card-header">
+            <h2>Join PenguPlay</h2>
+            <p>Prepare for the cute 3D adventure</p>
+        </div>
+        <form id="registerForm">
+            <div class="input-group file-group" style="text-align: center;">
+                <label class="static-label">Profile Avatar</label>
+                <img id="avatarPreview" src="https://via.placeholder.com/100?text=Avatar" alt="Preview">
+                <input type="file" id="avatar" accept="image/*" style="margin-top:10px;">
+                <input type="hidden" id="avatarBase64">
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="username" required placeholder=" ">
+                <label for="username">Username</label>
+            </div>
+            <div class="form-row">
+                <div class="input-group">
+                    <input type="email" id="reg-email" required placeholder=" ">
+                    <label for="reg-email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="reg-password" required placeholder=" ">
+                    <label for="reg-password">Password</label>
+                    <span class="toggle-password" onclick="togglePassword('reg-password')"><i class="fa-solid fa-eye toggle-password" onclick="togglePassword('reg-password', this)"></i></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-group">
+                    <input type="date" id="dob" required>
+                    <label class="static-label">Date of Hatching</label>
+                </div>
+                <div class="input-group">
+                    <select id="faction" required>
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="antarctica">Antarctica</option>
+                        <option value="galapagos">Galapagos</option>
+                        <option value="newzealand">New Zealand</option>
+                        <option value="arctic">Arctic (North)</option>
+                        <option value="patagonia">Patagonia</option>
+                        <option value="falkland">Falkland Islands</option>
+                    </select>
+                </div>
+            </div>
+            <div class="radio-group">
+                <span class="static-label">Difficulty:</span>
+                <label><input type="radio" name="difficulty" value="chill" checked> Chill</label>
+                <label><input type="radio" name="difficulty" value="extreme"> Extreme</label>
+            </div>
+            <div class="checkbox-group" style="margin-top:10px;">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I promise to pet the penguins safely</label>
+            </div>
+            <button type="submit" class="btn-primary">Register Now</button>
+        </form>
+        <div class="card-footer">
+            <p>Already a member? <a href="index.html">Back to Login</a></p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

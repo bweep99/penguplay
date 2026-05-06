@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game | PenguPlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="game-body" data-page="home">
+    <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <nav class="sidebar glass-liquid" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="sidebar-brand"><i class="fa-solid fa-igloo"></i> Menu</h2>
+        <a href="home.html" class="active"><i class="fa-solid fa-gamepad"></i> Play Game</a>
+        <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+        <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="#" class="logout" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="ui-layer">
+        <header class="game-header">
+            <div class="brand">
+                <h1>PenguPlay</h1>
+                <p>Welcome back! Let's play.</p>
+            </div>
+            <div class="nav-controls">
+                <div class="score-board glass-liquid">
+                    <i class="fa-solid fa-star"></i> <span>SCORE:</span><span id="scoreVal">0</span>
+                </div>
+                <div class="map-controls glass-liquid">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <select id="mapSelect">
+                        <option value="ice">Ice Blue Terrain</option>
+                        <option value="sunset">Sunset Rocks</option>
+                        <option value="night">Aurora Crystals</option>
+                    </select>
+                    <button id="resetScoreBtn" class="btn-danger"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <div class="gallery-container glass-liquid">
+            <h3><i class="fa-solid fa-trophy"></i> Achievements (<span id="achvCount">0</span>/5)</h3>
+            <div class="gallery">
+                <div class="achv-wrapper"><img src="https://i.pinimg.com/736x/29/ce/5c/29ce5c8b7f8a75bb4183bccbc0cc4f75.jpg" class="badge" id="badge-1"></div>
+                <div class="achv-wrapper"><img src="https://i.pinimg.com/736x/0f/25/6c/0f256cf33eddfd7e5013666a9bbade88.jpg" class="badge" id="badge-2"></div>
+                <div class="achv-wrapper"><img src="https://i.pinimg.com/736x/7d/18/fc/7d18fc23fd326315474b1747422c699f.jpg" class="badge" id="badge-3"></div>
+                <div class="achv-wrapper"><img src="https://i.pinimg.com/736x/15/d1/69/15d169c2cde7f4cb7706708c06bd396d.jpg" class="badge" id="badge-4"></div>
+                <div class="achv-wrapper"><img src="https://i.pinimg.com/736x/46/c6/da/46c6daf7047fa349d42e9c47c013a026.jpg" class="badge" id="badge-5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achievement Popup -->
+    <div id="achvPopup" class="achv-popup glass-liquid hidden">
+        <img id="achvPopupImg" src="" alt="Badge">
+        <div class="achv-text">
+            <h4><i class="fa-solid fa-award"></i> Unlocked!</h4>
+            <p id="achvPopupName">Badge Name</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

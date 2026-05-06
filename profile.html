@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | PenguPlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body" data-page="profile">
+    <!-- Navbar (Sama seperti home) -->
+    <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <nav class="sidebar glass-liquid" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="sidebar-brand"><i class="fa-solid fa-igloo"></i> Menu</h2>
+        <a href="home.html"><i class="fa-solid fa-gamepad"></i> Play Game</a>
+        <a href="profile.html" class="active"><i class="fa-solid fa-user"></i> My Profile</a>
+        <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="#" class="logout" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+    <canvas id="bgCanvas"></canvas>
+    
+    <div class="glass-liquid dashboard-panel">
+        <div class="profile-layout">
+            <div class="profile-left">
+                <div class="avatar-wrapper">
+                    <img id="userAvatar" src="https://via.placeholder.com/150" alt="Avatar">
+                    <div class="edit-overlay" onclick="document.getElementById('editAvatarInput').click()">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <input type="file" id="editAvatarInput" accept="image/*" style="display:none;">
+                </div>
+                <h1 id="userName">Loading...</h1>
+                <p class="tag-title">Ice Explorer</p>
+                <button id="saveAvatarBtn" class="btn-primary" style="display:none; margin-top:15px;">Save New Avatar</button>
+            </div>
+            
+            <div class="profile-right">
+                <h2><i class="fa-solid fa-address-card"></i> Account Details</h2>
+                <div class="detail-grid">
+                    <div class="detail-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                        <h4 id="userEmail">...</h4>
+                    </div>
+                    <div class="detail-box">
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <span>Date of Hatching</span>
+                        <h4 id="userDob">...</h4>
+                    </div>
+                    <div class="detail-box">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <span>Region</span>
+                        <h4 id="userRegion">...</h4>
+                    </div>
+                    <div class="detail-box highlight">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Highscore</span>
+                        <h4 id="userScore">0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

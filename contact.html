@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | PenguPlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body" data-page="contact">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar">×</button>
+        <h2>Menu</h2>
+        <a href="home.html">🎮 Play Game</a>
+        <a href="profile.html">👤 My Profile</a>
+        <a href="about.html">ℹ️ About Us</a>
+        <a href="contact.html" class="active">✉️ Contact</a>
+        <a href="#" class="logout" id="logoutBtn">🚪 Logout</a>
+    </nav>
+    <canvas id="bgCanvas"></canvas>
+
+    <div class="glass-card">
+        <div class="card-header">
+            <h2>Get In Touch</h2>
+            <p>Send a message to the Ice Headquarters!</p>
+        </div>
+        <form id="contactForm">
+            <div class="input-group">
+                <i class="fa-solid fa-user input-icon"></i>
+                <input type="text" id="contactName" required placeholder=" ">
+                <label for="contactName">Your Name</label>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-envelope input-icon"></i>
+                <input type="email" id="contactEmail" required placeholder=" ">
+                <label for="contactEmail">Your Email</label>
+            </div>
+            <div class="input-group textarea-group">
+                <i class="fa-solid fa-pen input-icon" style="top:25px;"></i>
+                <textarea id="contactMessage" required placeholder=" " rows="5"></textarea>
+                <label for="contactMessage">Your Message</label>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

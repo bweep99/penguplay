@@ -10,9 +10,10 @@
 </head>
 <body class="auth-body" data-page="login">
     <canvas id="bgCanvas"></canvas>
+    
     <div class="glass-card register-card">
         <div class="card-header">
-            <h2>Join PenguPlay</h2>
+            <h2><i class="fa-solid fa-user-plus"></i> Join PenguPlay</h2>
             <p>Prepare for the cute 3D adventure</p>
         </div>
         <form id="registerForm">
@@ -24,26 +25,34 @@
             </div>
 
             <div class="input-group">
+                <i class="fa-solid fa-user input-icon"></i>
                 <input type="text" id="username" required placeholder=" ">
                 <label for="username">Username</label>
             </div>
+            
             <div class="form-row">
                 <div class="input-group">
+                    <i class="fa-solid fa-envelope input-icon"></i>
                     <input type="email" id="reg-email" required placeholder=" ">
                     <label for="reg-email">Email</label>
                 </div>
                 <div class="input-group">
+                    <i class="fa-solid fa-lock input-icon"></i>
                     <input type="password" id="reg-password" required placeholder=" ">
                     <label for="reg-password">Password</label>
-                    <span class="toggle-password" onclick="togglePassword('reg-password')"><i class="fa-solid fa-eye toggle-password" onclick="togglePassword('reg-password', this)"></i></span>
+                    <!-- Ini tombol Show Password yang sudah di-fix -->
+                    <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('reg-password', this)"></i>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="input-group">
+                    <i class="fa-solid fa-calendar input-icon"></i>
                     <input type="date" id="dob" required>
                     <label class="static-label">Date of Hatching</label>
                 </div>
                 <div class="input-group">
+                    <i class="fa-solid fa-earth-americas input-icon"></i>
                     <select id="faction" required>
                         <option value="" disabled selected>Select Region</option>
                         <option value="antarctica">Antarctica</option>
@@ -55,21 +64,25 @@
                     </select>
                 </div>
             </div>
+
             <div class="radio-group">
-                <span class="static-label">Difficulty:</span>
+                <span class="static-label"><i class="fa-solid fa-gauge"></i> Difficulty:</span>
                 <label><input type="radio" name="difficulty" value="chill" checked> Chill</label>
                 <label><input type="radio" name="difficulty" value="extreme"> Extreme</label>
             </div>
+
             <div class="checkbox-group" style="margin-top:10px;">
                 <input type="checkbox" id="terms" required>
                 <label for="terms">I promise to pet the penguins safely</label>
             </div>
-            <button type="submit" class="btn-primary">Register Now</button>
+
+            <button type="submit" class="btn-primary">Register Now <i class="fa-solid fa-arrow-right"></i></button>
         </form>
         <div class="card-footer">
             <p>Already a member? <a href="index.html">Back to Login</a></p>
         </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
